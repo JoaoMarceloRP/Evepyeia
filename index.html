@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tela de Login</title>
+<style>
+    body, html {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #container {
+        border: 2px solid black;
+        padding: 20px;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+
+<div id="container">
+    <div>
+        <h2>Tela de Login</h2>
+        <input type="text" id="username" placeholder="Nome de usuário">
+        <br>
+        <input type="password" id="password" placeholder="Senha">
+        <br>
+        <button onclick="login()">Login</button>
+    </div>
+</div>
+
+<script>
+    function login() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        if (username === '' || password === '') {
+            alert('Por favor, preencha todos os campos.');
+            return;
+        }
+
+        window.location.href = 'home.html';
+    }
+</script>
+
+</body>
+</html>
